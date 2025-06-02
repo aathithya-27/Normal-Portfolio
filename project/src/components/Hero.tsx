@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { ArrowDown } from 'lucide-react';
+import profileImg from '../assets/profile.png';
 
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
-  const fullText = "I'm a Full-Stack Developer";
+  const fullText = "I'm a [Your Role/Title]";
   const [typingComplete, setTypingComplete] = useState(false);
 
   useEffect(() => {
@@ -23,9 +24,14 @@ const Hero = () => {
       className="min-h-screen flex flex-col justify-center items-center pt-16 relative bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800"
     >
       <div className="container mx-auto px-4 md:px-6 text-center">
+        <img
+          src={profileImg}
+          alt="Your Name"
+          className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 shadow-lg border-4 border-white dark:border-gray-700"
+        />
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
           <span className="text-gray-800 dark:text-white">Hello, I'm </span>
-          <span className="text-blue-600 dark:text-blue-400">Alex Developer</span>
+          <span className="text-blue-600 dark:text-blue-400">Your Name</span>
         </h1>
         
         <h2 className="text-2xl md:text-3xl font-medium mb-8 h-12">
@@ -34,8 +40,7 @@ const Hero = () => {
         </h2>
         
         <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
-          Building beautiful, responsive web applications with modern technologies. 
-          Passionate about creating seamless user experiences and clean code.
+          A passionate developer ready to build amazing things. Replace this with your own exciting bio!
         </p>
         
         <div className="flex flex-wrap justify-center gap-4">
